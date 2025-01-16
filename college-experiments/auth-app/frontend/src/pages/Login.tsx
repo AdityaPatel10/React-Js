@@ -17,6 +17,7 @@ function Login() {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setLoginInfo({ ...loginInfo, [name]: value });
+    console.log(loginInfo);
   };
 
   const togglePasswordVisibility = () => {
@@ -38,6 +39,7 @@ function Login() {
         body: JSON.stringify(loginInfo),
       });
       const result = await res.json();
+
       const { success, message, jwtToken, name, error } = result;
       if (success) {
         handleSuccess(message);
@@ -54,15 +56,25 @@ function Login() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-pink-100 px-4 sm:px-6 lg:px-8">
-      <div className="absolute top-8 right-8 sm:top-16 sm:right-16">
-        <Link to="/register" className="px-4 py-2 bg-indigo-600 text-white rounded-lg">Register</Link>
+      <div className="absolute top-8 right-8 sm:top-5 sm:right-16">
+        <Link
+          to="/register"
+          className="px-4 py-2 bg-indigo-600 text-white rounded-lg"
+        >
+          Register
+        </Link>
       </div>
       <div className="bg-white p-6 sm:p-10 rounded-xl shadow-lg w-full max-w-md">
         <h1 className="text-3xl font-bold mb-2 text-center">Login Now</h1>
         <p className="text-center mb-6">Hi, Welcome back 👋</p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Email
+            </label>
             <input
               onChange={handleChange}
               type="email"
@@ -74,7 +86,12 @@ function Login() {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Password
+            </label>
             <div className="relative">
               <input
                 onChange={handleChange}
@@ -98,7 +115,9 @@ function Login() {
             <label className="flex items-center">
               <input type="checkbox" className="mr-2" /> Remember Me
             </label>
-            <Link to="/forgot-password" className="text-pink-600">Forgot Password?</Link>
+            <Link to="/forgot-password" className="text-pink-600">
+              Forgot Password?
+            </Link>
           </div>
 
           <button
@@ -109,7 +128,10 @@ function Login() {
           </button>
 
           <p className="text-center mt-4">
-            Not registered yet? <Link to="/register" className="text-pink-600">Create an account</Link>
+            Not registered yet?{" "}
+            <Link to="/register" className="text-pink-600">
+              Create an account
+            </Link>
           </p>
         </form>
       </div>

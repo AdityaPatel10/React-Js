@@ -1,9 +1,8 @@
-// controllers/AuthController.ts
 import { Request, Response } from "express";
 import { UserModel } from "../models/user"; // Import UserModel here
 import bcrypt from "bcrypt";
 const jwt = require("jsonwebtoken");
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 dotenv.config();
 
 export const register = async (req: Request, res: Response) => {
@@ -34,7 +33,7 @@ export const register = async (req: Request, res: Response) => {
 
 export const login = async (req: Request, res: Response) => {
   try {
-    const {email, password } = req.body;
+    const { email, password } = req.body;
     const user = await UserModel.findOne({ email });
     const errorMsg = "Auth failed or password is wrong";
     if (!user) {

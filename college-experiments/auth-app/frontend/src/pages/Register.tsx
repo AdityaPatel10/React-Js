@@ -54,15 +54,25 @@ function Register() {
 
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-pink-100 p-5">
-      <div className="absolute top-8 right-8">
-        <Link to="/login" className="px-4 py-2 bg-indigo-600 text-white rounded-lg">Login</Link>
+      <div className="absolute top-8 right-8 sm:top-5 sm:right-16">
+        <Link
+          to="/login"
+          className="px-4 py-2 bg-indigo-600 text-white rounded-lg"
+        >
+          Login
+        </Link>
       </div>
       <div className="bg-white p-10 rounded-xl shadow-lg w-full max-w-md">
         <h1 className="text-3xl font-bold mb-2 text-center">Register Now</h1>
-        <p className="text-center mb-6">Hi, Welcome 👋</p>
+        <p className="text-center mb-6">Welcome 🙏</p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Name
+            </label>
             <input
               onChange={handleChange}
               type="text"
@@ -74,7 +84,12 @@ function Register() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Email
+            </label>
             <input
               onChange={handleChange}
               type="email"
@@ -86,7 +101,12 @@ function Register() {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Password
+            </label>
             <div className="relative">
               <input
                 onChange={handleChange}
@@ -114,12 +134,15 @@ function Register() {
           </button>
 
           <p className="text-center mt-4">
-            Already have an account? <Link to="/login" className="text-pink-600">Login</Link>
+            Already have an account?{" "}
+            <Link to="/login" className="text-pink-600">
+              Login
+            </Link>
           </p>
         </form>
       </div>
       <div className="hidden lg:flex items-center justify-center w-1/2 p-10">
-      <RegisterImg/>
+        <RegisterImg />
       </div>
       <ToastContainer />
     </div>

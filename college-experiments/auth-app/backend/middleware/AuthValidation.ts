@@ -1,7 +1,6 @@
 import Joi from "joi";
 import { Request, Response, NextFunction } from "express";
 
-// Register Validation Middleware
 const registerValidation = (
   req: Request,
   res: Response,
@@ -23,7 +22,6 @@ const registerValidation = (
   next();
 };
 
-// Login Validation Middleware
 const loginValidation = (
   req: Request,
   res: Response,

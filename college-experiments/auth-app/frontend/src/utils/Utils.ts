@@ -1,7 +1,7 @@
 import { toast, ToastOptions } from "react-toastify";
 
 const toastConfig: ToastOptions = {
-  position: "top-center"
+  position: "top-center",
 };
 
 export const handleSuccess = (msg: string): void => {

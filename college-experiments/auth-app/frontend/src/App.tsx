@@ -9,7 +9,7 @@ import { PrivateRouteProps } from "./types/AuthTypes";
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
-  const PrivateRoute = ({ element }:PrivateRouteProps) => {
+  const PrivateRoute = ({ element }: PrivateRouteProps) => {
     return isAuthenticated ? element : <Navigate to="/login" />;
   };
   return (

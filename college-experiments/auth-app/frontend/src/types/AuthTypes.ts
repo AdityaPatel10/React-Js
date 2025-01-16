@@ -12,7 +12,7 @@ export interface LoginCredentials {
 export interface Product {
   name: string;
   price: number;
-  image:string;
+  image: string;
   category: string;
 }
 

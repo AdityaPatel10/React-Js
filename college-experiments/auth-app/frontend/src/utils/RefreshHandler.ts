@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { RefreshHandlerProps } from "../types/AuthTypes";
-const RefreshHandler=({ setIsAuthenticated }: RefreshHandlerProps)=> {
+const RefreshHandler = ({ setIsAuthenticated }: RefreshHandlerProps) => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -18,6 +18,6 @@ const RefreshHandler=({ setIsAuthenticated }: RefreshHandlerProps)=> {
     }
   }, [location, navigate, setIsAuthenticated]);
   return null;
-}
+};
 
 export default RefreshHandler;

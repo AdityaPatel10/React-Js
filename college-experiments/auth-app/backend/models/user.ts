@@ -1,5 +1,4 @@
-// models/user.ts
-import mongoose, { Schema } from 'mongoose';
+import mongoose, { Schema } from "mongoose";
 
 const UserSchema = new Schema({
   name: {
@@ -14,8 +13,7 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true,
+    unique: true,
   },
 });
-
-// Use export to export UserModel
-export const UserModel = mongoose.model('User', UserSchema);
+export const UserModel = mongoose.model("User", UserSchema);

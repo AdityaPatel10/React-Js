@@ -7,7 +7,7 @@ dotenv.config();
 declare global {
   namespace Express {
     interface Request {
-      user?: any;  // You can replace `any` with a more specific type if needed
+      user?: any;
     }
   }
 }
@@ -32,7 +32,7 @@ const ensureAuthenticated = (
     res
       .status(403)
       .json({ message: "Unauthorized, JWT token wrong or expired" });
-      return;
+    return;
   }
 };
 

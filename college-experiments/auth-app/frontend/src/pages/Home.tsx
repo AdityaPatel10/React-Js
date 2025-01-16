@@ -47,6 +47,14 @@ function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-pink-100 px-4 sm:px-6 lg:px-8">
+      <div className="absolute top-8 right-8 sm:top-5 sm:right-16">
+        <button
+          onClick={handleLogout}
+          className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        >
+          Logout
+        </button>
+      </div>
       <div className="bg-white p-6 sm:p-10 rounded-xl shadow-lg w-full max-w-4xl">
         <h1 className="text-3xl font-bold mb-4 text-center text-gray-700">
           Welcome {loggedInUser}
@@ -85,15 +93,6 @@ function Home() {
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="flex justify-center mt-6">
-          <button
-            onClick={handleLogout}
-            className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          >
-            Logout
-          </button>
         </div>
       </div>
 
