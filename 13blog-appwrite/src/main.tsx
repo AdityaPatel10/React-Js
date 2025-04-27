@@ -6,12 +6,13 @@ import store from "./store/store.ts";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.tsx";
-import { Protected, Login } from "./components/index.ts";
+import { Protected } from "./components/index.ts";
 import Signup from "./pages/Signup";
 import AllPosts from "./pages/AllPosts";
 import AddPost from "./pages/AddPost";
 import EditPost from "./pages/EditPost";
 import Post from "./pages/Post";
+import Login from "./pages/Login.tsx";
 
 const router = createBrowserRouter([
   {
